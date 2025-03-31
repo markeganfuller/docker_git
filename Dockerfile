@@ -7,6 +7,8 @@ RUN pacman -Sy --noconfirm git
 RUN pacman -S --noconfirm vim
 # Install less so we can page
 RUN pacman -S --noconfirm less
+# For ssh-keygen
+RUN pacman -S --noconfirm openssh
 
 # By providing user details at build time we can ensure the user exists inside
 # the container and not have permissinos issues down the line
