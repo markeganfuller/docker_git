@@ -2,7 +2,9 @@
 
 FROM archlinux:base
 
-RUN pacman -Sy --noconfirm git
+RUN pacman -Syu --noconfirm
+
+RUN pacman -S --noconfirm git
 # Install vim so we can edit commit messages etc
 RUN pacman -S --noconfirm vim
 # Install less so we can page
